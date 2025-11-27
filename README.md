@@ -40,8 +40,8 @@ A multi-service application designed to demonstrate real-time data synchronizati
     | `DB_PORT`             | Port of the PostgreSQL database.             | `5432`                 |
     | `DB_NAME`             | Name of the database to connect to.          | `postgres`             |
     | `DB_USER`             | Username for the database connection.        | `postgres`             |
-    | `DB_PASSWORD`         | Password for the database user.              | `your_secret_password` |
-    | `JWT_KEY`             | Secret key used for signing JSON Web Tokens. | `your_jwt_secret`      |
+    | `DB_PASSWORD`         | Password for the database user.              | `test-password` |
+    | `JWT_KEY`             | Secret key used for signing JSON Web Tokens. | `some_jwt_secret`      |
 
     **B) Database Listener Service (`./services/database-listener-service/.env`)**
 
@@ -51,10 +51,10 @@ A multi-service application designed to demonstrate real-time data synchronizati
     | `DB_PORT`           | Port of the PostgreSQL database.          | `5432`                 |
     | `DB_NAME`           | Name of the database to connect to.       | `postgres`             |
     | `DB_USER`           | Username for the database connection.     | `postgres`             |
-    | `DB_PASSWORD`       | Password for the database user.           | `your_secret_password` |
+    | `DB_PASSWORD`       | Password for the database user.           | `test-password` |
     | `BROKER_HOST`       | Hostname of the Kafka message broker.     | `kafka`                |
     | `BROKER_PORT`       | Port of the Kafka message broker.         | `9092`                 |
-    | `BROKER_CLIENT_ID`  | Unique ID for this service's Kafka client.| `db-listener-client`   |
+    | `BROKER_CLIENT_ID`  | Unique ID for this service's Kafka client.| `test-broker-client`   |
 
     **C) WebSocket Connection Service (`./services/websocket-connection-service/.env`)**
 
@@ -64,12 +64,12 @@ A multi-service application designed to demonstrate real-time data synchronizati
     | `DB_PORT`             | Port of the PostgreSQL database.                | `5432`                   |
     | `DB_NAME`             | Name of the database to connect to.             | `postgres`               |
     | `DB_USER`             | Username for the database connection.           | `postgres`               |
-    | `DB_PASSWORD`         | Password for the database user.                 | `your_secret_password`   |
+    | `DB_PASSWORD`         | Password for the database user.                 | `test-password`          |
     | `WS_PORT`             | Port for this WebSocket server to listen on.    | `5001`                   |
     | `BROKER_HOST`         | Hostname of the Kafka message broker.           | `kafka`                  |
     | `BROKER_PORT`         | Port of the Kafka message broker.               | `9092`                   |
-    | `BROKER_CLIENT_ID`    | Unique ID for this service's Kafka client.      | `websocket-client`       |
-    | `SESSION_SERVICE_URL` | URL of the internal session management service. | `http://session-service:3000` |
+    | `BROKER_CLIENT_ID`    | Unique ID for this service's Kafka client.      | `test-broker-client`       |
+    | `SESSION_SERVICE_URL` | URL of the internal session management service. | `localhost-url` |
 
 4.  Start all services using Docker Compose. This will build the images and run the containers in detached mode.
     ```bash
