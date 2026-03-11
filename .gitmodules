@@ -7,3 +7,6 @@
 [submodule "services/database-listener-service"]
 	path = services/database-listener-service
 	url = git@github.com:juannpz/database-listener-service.git
+[submodule "services/session-service"]
+	path = services/session-service
+	url = git@github.com:juannpz/session-service.git
