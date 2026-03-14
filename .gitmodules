@@ -10,3 +10,6 @@
 [submodule "services/session-service"]
 	path = services/session-service
 	url = git@github.com:juannpz/session-service.git
+[submodule "services/login-service"]
+	path = services/login-service
+	url = git@github.com:juannpz/login-service.git
